@@ -16,7 +16,6 @@ require_once("config.php");
 //echo $root;
 
 
-
 //carrega varios usuarios lista
 //$lista = Usuario::getList();
 //echo json_encode($lista);
@@ -25,13 +24,28 @@ require_once("config.php");
 //$search = Usuario::search("hy");
 //echo json_encode($search);
 
-//carraga um usuario usando o login e a senha 
+//carraga um usuario usando o login e a senha validando 
+//$usuario = new Usuario();
+//$usuario->login("caio" ,"bicha");
+//echo $usuario;
+
+/*
+//inseri dados com procedures/criando um novo usuario
+$aluno = new Usuario("Aluno","@lun0");
+
+//adicionando metodo construtor na classe usuario 
+//$aluno->setDeslogin("Aluno");
+//$aluno->setDessenha("@lun0");
+
+$aluno->insert();
+
+echo $aluno;
+*/
+
 $usuario = new Usuario();
-$usuario->login("caio" ,"bicha");
-
+$usuario->loadById(10);
+$usuario->update("Professor","!@##$");
 echo $usuario;
-
-
 
 
 ?>
