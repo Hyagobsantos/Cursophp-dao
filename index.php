@@ -26,7 +26,7 @@ require_once("config.php");
 
 //carraga um usuario usando o login e a senha validando 
 //$usuario = new Usuario();
-//$usuario->login("caio" ,"bicha");
+//$usuario->login("" ,"");
 //echo $usuario;
 
 /*
