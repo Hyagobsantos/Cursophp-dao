@@ -1,58 +1,53 @@
-<?php
+<?php 
 
 require_once("config.php");
 
+$sql = new Sql();
 
-//select basico de todos usuarios
-//$sql = new Sql();
+$usuarios = $sql->select("SELECT * FROM tb_usuarios");
 
-//$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+echo json_encode($usuarios);
 
-//echo json_encode($usuarios);
-
-//carrega um usuario
+//Carrega um usuário
 //$root = new Usuario();
-//$root->loadById(7);
+//$root->loadbyId(3);
 //echo $root;
 
-
-//carrega varios usuarios lista
+//Carrega uma lista de usuários
 //$lista = Usuario::getList();
 //echo json_encode($lista);
 
-//carrega uma lista de usuarios buscando pelo login, definindo pelo usuarios buscando 
-//$search = Usuario::search("hy");
+//Carrega uma lista de usuários buscando pelo login
+//$search = Usuario::search("jo");
 //echo json_encode($search);
 
-//carraga um usuario usando o login e a senha validando 
+//carrega um usuário usando o login e a senha
 //$usuario = new Usuario();
-//$usuario->login("" ,"");
+//$usuario->login("root", "!@#$");
+
 //echo $usuario;
-
 /*
-//inseri dados com procedures/criando um novo usuario
-$aluno = new Usuario("Aluno","@lun0");
-
-//adicionando metodo construtor na classe usuario 
-//$aluno->setDeslogin("Aluno");
-//$aluno->setDessenha("@lun0");
-
+//Criando um novo usuário
+$aluno = new Usuario("aluno", "@lun0");
 $aluno->insert();
-
 echo $aluno;
 */
-
-//consultando e alterando usuario
 /*
+//Alterar um usuário
 $usuario = new Usuario();
-$usuario->loadById(10);
-$usuario->update("Professor","!@##$");
+
+$usuario->loadById(8);
+
+$usuario->update("professor", "!@#$%¨&*");
+
 echo $usuario;
 */
 
-$usuario = new Usuario();
-$usuario->loadById(8);
-$usuario->delete();
-echo $usuario;
+//$usuario = new Usuario();
 
-?>
+//$usuario->loadById(7);
+
+//$usuario->delete();
+
+//echo $usuario;
+ ?>
